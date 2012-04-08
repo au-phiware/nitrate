@@ -1,16 +1,17 @@
-{ "development":
-  { "driver":   "mongoose"
-  , "host":     "localhost"
-  , "database": "default-dev"
-  }
-, "test":
-  { "driver":   "mongoose"
-  , "host":     "localhost"
-  , "database": "default-test"
-  }
-, "production":
-  { "driver":   "mongoose"
-  , "host":     "localhost"
-  , "database": "default-production"
-  }
+{
+   "test" : {
+      "database" : "default-test",
+      "host" : "localhost",
+      "driver" : "mongoose"
+   },
+   "production" : {
+      "database" : "default-production",
+      "host" : "localhost",
+      "driver" : "mongoose"
+   },
+   "development" : {
+      "database" : "default-dev",
+      "host" : "localhost",
+      "driver" : "mongoose"
+   }
 }
