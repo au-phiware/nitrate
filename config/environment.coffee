@@ -4,8 +4,9 @@ app.configure ->
     cwd = process.cwd()
     
     app.set 'views', cwd + '/app/views'
-    app.set 'view engine', 'jade'
+    app.set 'view engine', 'coffee'
     app.set 'view options', complexNames: true
+    app.register '.coffee', require('coffeekup').adapters.express
     app.enable 'coffee'
 
     app.use express.static(cwd + '/public', maxAge: 86400000)
